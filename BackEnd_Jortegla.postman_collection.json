@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "65b4d2bb-94a3-43eb-ae93-3f6a27e60c8d",
+		"name": "BackEnd_Jortegla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "localhost:8080/persona/traer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/traer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"traer"
+							]
+						},
+						"description": "Traer lista de personas"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/persona/crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jessica\",\r\n    \"apellido\": \"Ortega\",\r\n    \"titulo\": \"Full Stack Developer Jr.\",\r\n    \"foto\": \"c:/User/jessi/OneDrive/Documentos/foto.jpg\",\r\n    \"descripcion\": \"Una breve descripcion\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"crear"
+							]
+						},
+						"description": "Crear una nueva persona"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/persona/editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/editar/2?nombre=Ennio&apellido=Flores Estrada&titulo=Ing. Civil&foto=img.jpg&descripcion=otra descripcion",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"editar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Ennio"
+								},
+								{
+									"key": "apellido",
+									"value": "Flores Estrada"
+								},
+								{
+									"key": "titulo",
+									"value": "Ing. Civil"
+								},
+								{
+									"key": "foto",
+									"value": "img.jpg"
+								},
+								{
+									"key": "descripcion",
+									"value": "otra descripcion"
+								}
+							]
+						},
+						"description": "Editando informacion del id 2"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/persona/borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/borrar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"borrar",
+								"2"
+							]
+						},
+						"description": "Borrando la persona del id 2"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/persona/traer/perfil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/traer/perfil",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"traer",
+								"perfil"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experiencia",
+			"item": [
+				{
+					"name": "localhost:8080/experiencia/crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tituloExp\": \"EXperiencia 1\",\r\n    \"nombreExp\": \"Lugar de la experiencia 1\",\r\n    \"fechaExp\": \"2022\",\r\n    \"descripcionExp\": \"Funciones en la experiencia 1\",\r\n    \"imagenExp\": \"imagenExperiencia1.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/experiencia/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experiencia",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/experiencia/traer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/experiencia/traer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experiencia",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/experiencia/borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/experiencia/borrar/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experiencia",
+								"borrar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/experiencia/editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/experiencia/editar/2?tituloExp=titulo 2&nombreExp=nombre 2&fechaExp=2022&descripcionExp=Descripcion 2&imagenExp=imagen2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experiencia",
+								"editar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "tituloExp",
+									"value": "titulo 2"
+								},
+								{
+									"key": "nombreExp",
+									"value": "nombre 2"
+								},
+								{
+									"key": "fechaExp",
+									"value": "2022"
+								},
+								{
+									"key": "descripcionExp",
+									"value": "Descripcion 2"
+								},
+								{
+									"key": "imagenExp",
+									"value": "imagen2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Educacion",
+			"item": [
+				{
+					"name": "localhost:8080/educacion/crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tituloEdu\": \"Full Stack Developer\",\r\n    \"lugarEdu\": \"Argentina Programa - Argentina\",\r\n    \"fechaEdu\": \"2022\",\r\n    \"logoEdu\": \"logoAp.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/educacion/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"educacion",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/educacion/traer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/educacion/traer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"educacion",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/educacion/traer/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/educacion/traer/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"educacion",
+								"traer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/educacion/borrar/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/educacion/borrar/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"educacion",
+								"borrar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/educacion/editar/2?tituloEdu=Titulo educacion 2&lugarEdu=Argentina&fechaEdu=2022&logoEdu=img2.jpg",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/educacion/editar/2?tituloEdu=Titulo educacion 2&lugarEdu=Argentina&fechaEdu=2022&logoEdu=img2.jpg",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"educacion",
+								"editar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "tituloEdu",
+									"value": "Titulo educacion 2"
+								},
+								{
+									"key": "lugarEdu",
+									"value": "Argentina"
+								},
+								{
+									"key": "fechaEdu",
+									"value": "2022"
+								},
+								{
+									"key": "logoEdu",
+									"value": "img2.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habilidades",
+			"item": [
+				{
+					"name": "localhost:8080/habilidades/crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreHab\": \"Java\",\r\n    \"imagenHab\": \"imagenJava\",\r\n    \"porcentajeHab\": \"50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/habilidades/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"habilidades",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/habilidades/traer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/habilidades/traer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"habilidades",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/habilidades/editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/habilidades/editar/7?nombreHab=React&imagenHab=imagen &porcentajeHab=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"habilidades",
+								"editar",
+								"7"
+							],
+							"query": [
+								{
+									"key": "nombreHab",
+									"value": "React"
+								},
+								{
+									"key": "imagenHab",
+									"value": "imagen "
+								},
+								{
+									"key": "porcentajeHab",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/habilidades/traer/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/habilidades/traer/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"habilidades",
+								"traer",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/habilidades/borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/habilidades/borrar/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"habilidades",
+								"borrar",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proyectos",
+			"item": [
+				{
+					"name": "localhost:8080/proyectos/crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreProy\": \"Proyecto 3\",\r\n    \"fechaProy\": \"2022\",\r\n    \"descripcionProy\": \"Descripcion de proyecto 3\",\r\n    \"fotoProy\": \"imagen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/proyectos/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/proyectos/traer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/proyectos/traer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								"traer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/proyectos/editar/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/proyectos/editar/3?nombreProy=Proyecto&fechaProy=2022&descripcionProy=Programas usados en el proyecto&fotoProy=foto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								"editar",
+								"3"
+							],
+							"query": [
+								{
+									"key": "nombreProy",
+									"value": "Proyecto"
+								},
+								{
+									"key": "fechaProy",
+									"value": "2022"
+								},
+								{
+									"key": "descripcionProy",
+									"value": "Programas usados en el proyecto"
+								},
+								{
+									"key": "fotoProy",
+									"value": "foto"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/proyectos/borrar/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/proyectos/borrar/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								"borrar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/proyectos/traer/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/proyectos/traer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								"traer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
