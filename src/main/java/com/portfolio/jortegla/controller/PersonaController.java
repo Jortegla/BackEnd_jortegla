@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600L)
+@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
 
 public class PersonaController {
     

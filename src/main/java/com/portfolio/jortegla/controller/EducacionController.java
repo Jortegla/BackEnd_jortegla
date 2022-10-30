@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*", maxAge = 3600L)
+@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
 @RestController
 
 public class EducacionController {
