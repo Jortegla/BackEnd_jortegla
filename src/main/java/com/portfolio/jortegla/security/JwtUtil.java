@@ -12,8 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Component
+@CrossOrigin(origins = "*")
 public class JwtUtil {
     
     private String SECRET_KEY = "examportal";
