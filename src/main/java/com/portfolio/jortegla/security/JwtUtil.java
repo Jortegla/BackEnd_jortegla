@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Component
-@CrossOrigin(origins = "*")
+
 public class JwtUtil {
     
     private String SECRET_KEY = "examportal";

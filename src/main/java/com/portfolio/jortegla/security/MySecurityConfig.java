@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @EnableWebSecurity
 @Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = false)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 @CrossOrigin(origins = "*")
 public class MySecurityConfig  extends WebSecurityConfigurerAdapter{
     

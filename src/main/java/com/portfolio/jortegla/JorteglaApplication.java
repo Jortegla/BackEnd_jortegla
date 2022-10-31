@@ -40,7 +40,7 @@ public class JorteglaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        /*Usuario usuario = new Usuario();
+        Usuario usuario = new Usuario();
         usuario.setNombre("Jessica");
         usuario.setApellido("Ortega");
         usuario.setUsername("jessica");
@@ -59,7 +59,7 @@ public class JorteglaApplication implements CommandLineRunner {
         
         Usuario usuarioGuardado = iUsuarioService.guardarUsuario(usuario, usuarioRoles);
         System.out.println(usuarioGuardado.getUsername());
-    */
+    
  }       
         
 }
