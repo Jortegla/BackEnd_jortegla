@@ -40,7 +40,6 @@ public class AuthenticationController {
         try {
              autenticar(jwtRequest.getUsername(),jwtRequest.getPassword());
         }catch (Exception exception){
-            exception.printStackTrace();
             throw  new Exception("USUARIO NO ENCONTRADO");
         }
         UserDetails  userDetails = this.userDetailsService.loadUserByUsername(jwtRequest.getUsername());
