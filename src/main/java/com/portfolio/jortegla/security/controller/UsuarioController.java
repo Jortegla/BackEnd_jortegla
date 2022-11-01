@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/usuarios")
-@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
+
+@CrossOrigin(origins = "*")
 public class UsuarioController {
     
     @Autowired
     private IUsuarioService usuarioService;
     
-    @PostMapping("/")
+    @PostMapping("/usuarios/")
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
         
@@ -41,12 +41,12 @@ public class UsuarioController {
        return usuarioService.guardarUsuario(usuario, usuarioRoles);
     }
     
-    @GetMapping("/{username}")
+    @GetMapping("/usuarios/{username}")
     public Usuario obtenerUsuario(@PathVariable("username")String username){
         return usuarioService.obtenerUsuario(username);
     }
     
-    @DeleteMapping("/{usuarioId}")
+    @DeleteMapping("/usuarios/{usuarioId}")
     public void eliminarUsuario(@PathVariable("usuarioId")Long usuarioId){
         usuarioService.eliminarUsuario(usuarioId);
     }
