@@ -25,22 +25,22 @@ public class JorteglaApplication implements CommandLineRunner {
 		SpringApplication.run(JorteglaApplication.class, args);
 	}
         
-        @Bean
+     /*   @Bean
         public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                .allowedOrigins("https://frontend-portfolio-ap.web.app")
+                .allowedOrigins("*")
                 .allowedMethods("*")
                 .allowedHeaders("*");
             }
         };
-    } 
+    } */
 
     @Override
     public void run(String... args) throws Exception {
-        Usuario usuario = new Usuario();
+        /*Usuario usuario = new Usuario();
         usuario.setNombre("Jessica");
         usuario.setApellido("Ortega");
         usuario.setUsername("jessica");
@@ -58,8 +58,8 @@ public class JorteglaApplication implements CommandLineRunner {
         usuarioRoles.add(usuarioRol);
         
         Usuario usuarioGuardado = iUsuarioService.guardarUsuario(usuario, usuarioRoles);
-        System.out.println(usuarioGuardado.getUsername());
-    
- }       
+        System.out.println(usuarioGuardado.getUsername());*/   
+
+    }
         
 }
