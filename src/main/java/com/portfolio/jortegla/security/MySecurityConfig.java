@@ -63,7 +63,7 @@ public class MySecurityConfig  extends WebSecurityConfigurerAdapter{
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/generate-token","/usuarios/").permitAll()
-                /*.antMatchers(HttpMethod.OPTIONS).permitAll()*/
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(unauthorizeHandler)
