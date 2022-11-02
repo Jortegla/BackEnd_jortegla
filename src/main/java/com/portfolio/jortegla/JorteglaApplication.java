@@ -29,6 +29,7 @@ public class JorteglaApplication implements CommandLineRunner {
 		SpringApplication.run(JorteglaApplication.class, args);
 	}
         
+        
       @Bean
         public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
