@@ -54,7 +54,7 @@ public class MySecurityConfig  extends WebSecurityConfigurerAdapter{
     
 
     
-    @Override
+    /*@Override
     protected void configure(HttpSecurity https) throws Exception {
         https
                 .csrf()
@@ -71,7 +71,7 @@ public class MySecurityConfig  extends WebSecurityConfigurerAdapter{
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         
         https.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-    }
+    }*/
     
     
 }
