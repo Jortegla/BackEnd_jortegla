@@ -54,24 +54,24 @@ public class MySecurityConfig  extends WebSecurityConfigurerAdapter{
     
 
     
-    /*@Override
-    protected void configure(HttpSecurity https) throws Exception {
-        https
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
                 .csrf()
                 .disable()
                 .cors()
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/generate-token","/usuarios/").permitAll()
-                .antMatchers(HttpMethod.OPTIONS).permitAll()
+                /*.antMatchers(HttpMethod.OPTIONS).permitAll()*/
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(unauthorizeHandler)
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         
-        https.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-    }*/
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+    }
     
     
 }
