@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
 public class AuthenticationController {
     
     
@@ -42,6 +42,7 @@ public class AuthenticationController {
         }catch (Exception exception){
             throw  new Exception("USUARIO NO ENCONTRADO");
         }
+        
         UserDetails  userDetails = this.userDetailsService.loadUserByUsername(jwtRequest.getUsername());
         String token = this.jwtUtils.generateToken(userDetails);
         

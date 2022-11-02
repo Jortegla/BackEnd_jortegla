@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 @Component
-
+@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
 public class JwtAuthenticationFilter extends OncePerRequestFilter{
 
     @Autowired

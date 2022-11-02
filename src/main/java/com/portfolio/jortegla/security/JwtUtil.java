@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = "*")
 public class JwtUtil {
     
-    private String SECRET_KEY = "examportal";
+    private String SECRET_KEY = "jessica";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);

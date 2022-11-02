@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Component
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://frontend-portfolio-ap.web.app")
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint{
 
     @Override
