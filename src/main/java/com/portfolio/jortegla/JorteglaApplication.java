@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -20,12 +21,15 @@ public class JorteglaApplication implements CommandLineRunner {
     
     @Autowired 
     private IUsuarioService iUsuarioService;
+    
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(JorteglaApplication.class, args);
 	}
         
-     /*   @Bean
+      @Bean
         public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -36,15 +40,16 @@ public class JorteglaApplication implements CommandLineRunner {
                 .allowedHeaders("*");
             }
         };
-    } */
+    }
 
     @Override
     public void run(String... args) throws Exception {
-        /*Usuario usuario = new Usuario();
+        
+        Usuario usuario = new Usuario();
         usuario.setNombre("Jessica");
         usuario.setApellido("Ortega");
         usuario.setUsername("jessica");
-        usuario.setPassword("12345");
+        usuario.setPassword(bCryptPasswordEncoder.encode("12345"));
         usuario.setEmail("jortegla@gmail.com");
         
         Rol rol = new Rol();
@@ -58,8 +63,9 @@ public class JorteglaApplication implements CommandLineRunner {
         usuarioRoles.add(usuarioRol);
         
         Usuario usuarioGuardado = iUsuarioService.guardarUsuario(usuario, usuarioRoles);
-        System.out.println(usuarioGuardado.getUsername());*/   
-
-    }
-        
+        System.out.println(usuarioGuardado.getUsername());   
+    
+       
+             
+    }    
 }
